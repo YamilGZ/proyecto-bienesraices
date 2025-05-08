@@ -1,0 +1,22 @@
+{
+    "name": "admin/bienesraices",
+    "description": "Creando un proyecto con POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Yamil",
+            "email": "correo@correo.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    }
+}
