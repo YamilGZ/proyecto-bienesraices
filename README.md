@@ -55,37 +55,37 @@ proyecto5_bienesraices/
 ## 📷 Capturas de pantalla
 
 ### Página de inicio
-![Inicio](screenshots/Home.JPG)
+![Inicio](screenshots/HomePage.JPG)
 
 ### Casas y Departamentos
-![Casas y Departamentos](screenshots/CasasyDepas.JPG)
+![Casas y Departamentos](screenshots/CasaPage.JPG)
 
 ### Contactanos
-![Contactanos](screenshots/Footer.JPG)
+![Contactanos](screenshots/ConPage.JPG)
 
 ### Página de Nosotros
-![Nosotros](screenshots/Nosotros.JPG)
+![Nosotros](screenshots/NosotrosPage.JPG)
 
 ### Página de Blog
-![Blog](screenshots/Blog.JPG)
+![Blog](screenshots/BlogPage.JPG)
 
 ### Página de Contacto
-![Contacto](screenshots/Contacto.JPG)
+![Contacto](screenshots/ContactoPage.JPG)
 
 ### Página de Entrada
-![Entrada](screenshots/Entrada.JPG)
+![Entrada](screenshots/EntradaPage.JPG)
 
 ### Solicitud de Contacto por Telefono
-![SolicitudT](screenshots/ContactoTelefono.JPG)
+![SolicitudT](screenshots/SoliPage.JPG)
 
 ### Solicitud de Contacto por Correo
-![SolicitudC](screenshots/ContactoCorreo.JPG)
+![SolicitudC](screenshots/SolicPage.JPG)
 
 ### Login
-![Login](screenshots/Login.JPG)
+![Login](screenshots/LoginPage.JPG)
 
 ### Página de Administrador
-![Administrador](screenshots/Admin.JPG)
+![Administrador](screenshots/AdminPage.JPG)
 
 ---
 
