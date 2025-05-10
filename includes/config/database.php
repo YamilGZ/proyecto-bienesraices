@@ -1,22 +1,16 @@
 <?php
 
-function conectarDB(): mysqli {
-    // Cargar el archivo .env
-    $env = parse_ini_file(__DIR__ . '/../../.env');
+$db = mysqli_connect(
+    $_ENV['DB_HOST'],
+    $_ENV['DB_USER'],
+    $_ENV['DB_PASS'],
+    $_ENV['DB_NAME']);
 
-    // Extraer variables del entorno
-    $host = $env['DB_HOST'] ;
-    $user = $env['DB_USER'] ;
-    $pass = $env['DB_PASS'] ;
-    $name = $env['DB_NAME'] ;
+$db->set_charset('utf8');
 
-    // Conectar a la base de datos
-    $db = new mysqli($host, $user, $pass, $name);
-
-    if ($db->connect_error) {
-        echo "Error: no se pudo conectar - " . $db->connect_error;
-        exit;
-    }
-
-    return $db;
+if (!$db) {
+    echo "Error: No se pudo conectar a MySQL.";
+    echo "errno de depuración: " . mysqli_connect_errno();
+    echo "error de depuración: " . mysqli_connect_error();
+    exit;
 }

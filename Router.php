@@ -31,7 +31,7 @@ class Router {
         '/vendedores/eliminar'];
 
 
-        $urlActual = $_SERVER['PATH_INFO'] ?? '/';
+        $urlActual = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
         $metodo = $_SERVER['REQUEST_METHOD'];
 
         if ($metodo === 'GET') {
@@ -49,7 +49,7 @@ class Router {
             // la URL existe y hay una funcion asociada
             call_user_func($fn, $this);
         }else {
-            echo "pagina no encontrada";
+            echo "pagina no encontrada o Ruta no válida";
         }
     }
 
@@ -57,16 +57,13 @@ class Router {
     public function render($view, $datos = []) {
 
         foreach($datos as $key => $value) {
-            $$key = $value;
+            $$key = $value; // Doble signo de dolar significa: variable variable, básicamente nuestra variable sigue siendo la original, pero al asignarla a otra no la reescribe, mantiene su valor, de esta forma el nombre de la variable se asigna dinamicamente
         }       
 
         ob_start();// almacenamos en memoria durante un momento...
 
         include __DIR__ . "/views/$view.php";
-
         $contenido = ob_get_clean();// limpia el buffer
-
         include __DIR__ . "/views/layout.php";
     }
-
 }
